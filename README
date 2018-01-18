@@ -1,0 +1,3 @@
+Simple demo of using mocha to unit test
+`npm install && npm test`
+
