@@ -90,6 +90,9 @@ describe('MyClass', () =>
         const mockGenerator = sinon.stub().returns(1);
         const sut = new MyClass(null, mockGenerator);
         expect(sut.getRandomBoolean()).to.be.false;
+        // since we mock out the dependency, we should probably also
+        // ensure that it was called correctly
+        assert.ok(mockGenerator.calledOnce);
     });
   });
 });
