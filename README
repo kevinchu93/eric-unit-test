@@ -1,3 +1,12 @@
 Simple demo of using mocha to unit test
 `npm install && npm test`
 
+I have provided 2 implementations of UserService.
+You will find that usage of UserService is the same regardless of which implementation is chosen.
+Therefore, testing classes that depend on the UserService is also agnostic to the chosen implementation.
+However, testing the UserService implementations will likely be implementation specific.
+
+One of the UserService implementations has a bug.
+You should not be able to discover the bug by unit testing upstream classes.
+If you do, that means you have not mocked out the UserService, and are doing integration tests instead of unit tests.
+You should only be able to discover the bug by unit testing the implementation class itself.
