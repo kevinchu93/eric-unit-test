@@ -2,9 +2,9 @@ const User = require('./User.js');
 
 class InMemoryUserService
 {
-    constructor()
+    constructor(arr)
     {
-        this.users = [];
+        this.users = arr;
     }
 
     createUser(name)
@@ -35,7 +35,7 @@ class InMemoryUserService
 
     deleteUser(id)
     {
-        this.users.filter(u => u.id != id);
+        this.users = this.users.filter(u => u.id != id);
     }
 }
 

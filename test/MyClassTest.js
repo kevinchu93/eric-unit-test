@@ -3,7 +3,7 @@ const expect = require('expect.js');
 const should = require('should');
 const sinon = require('sinon');
 
-const MyClass = require('./MyClass');
+const MyClass = require('../MyClass');
 
 // mocha suggests grouping tests in "describe" functions, and "it" functions
 describe('MyClass', () =>
